@@ -1,0 +1,77 @@
+public class Class_Str
+    {
+        public int StrGetLength(string convertedStr)
+        {
+            int lStr = 0;
+            lStr = convertedStr.Length;
+            return lStr;
+        }
+        //函数_文本_获取文本长度(待获取的文本)：：参数一(convertedStr)
+        public string StrGetLeft(string convertedStr, int strLength)
+        {
+            string sStr = "";
+            sStr = convertedStr.Substring(0, strLength);
+            return sStr;
+        }
+        //函数_文本_获取字符串左边(待获取的文本，要获取的长度)：：参数一(convertedStr)：：参数二(strLength)
+        public string StrGetRight(string convertedStr, int strLength)
+        {
+            string sStr = "";
+            sStr = convertedStr.Substring(convertedStr.Length - strLength);
+            return sStr;
+        }
+        //函数_文本_获取字符串右边
+        public string StrGetMid(string convertedStr, int beginIndex, int endIndex)
+        {
+            string sStr = "";
+            sStr = convertedStr.Substring(beginIndex, endIndex - beginIndex + 1);
+            return sStr;
+        }
+        //函数_文本_获取字符串中间字符
+        public string StrAsciiToChar(int AsciiCode)
+        {
+            string alpha = ((char)AsciiCode).ToString();
+            return alpha;
+        }
+        //函数_文本_Ascii码转字符串字符
+        public int StrCharToAscii(char charCode)
+        {
+            int asc = (int)charCode;
+            return asc;
+        }
+        //函数_文本_字符转_Ascii码
+        public string StrCap(string str)
+        {
+            string retStr = string.Empty;
+            foreach (char item in str)
+            {
+                if (item >= 'a' && item <= 'z')
+                {
+                    retStr += item.ToString().ToUpper();
+                }
+                else
+                {
+                    retStr += item.ToString();
+                }
+            }
+            return retStr;
+        }
+        //函数_文本_转换到大写
+        public string StrLower(string str)
+        {
+            string retStr = string.Empty;
+            foreach (char item in str)
+            {
+                if (item >= 'A' && item <= 'Z')
+                {
+                    retStr += item.ToString().ToLower();
+                }
+                else
+                {
+                    retStr += item.ToString();
+                }
+            }
+            return retStr;
+        }
+        //函数_文本_转换到小写
+    }
